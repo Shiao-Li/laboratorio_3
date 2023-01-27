@@ -1,0 +1,121 @@
+<!-- ETIQUETAS DE HTML-->
+
+<!-- Formularios -->
+
+<!-- https://developer.mozilla.org/es/docs/Web/HTML/Element/form -->
+
+<!-- 
+    radio:        Permite seleccionar una única opción de una lista de opciones relacionadas.
+
+    checkbox:     Permite seleccionar varias opciones de una lista de opciones relacionadas.
+
+    select:       Crea una lista de opciones donde podemos seleccionar una o varias opciones.
+                  Cada opción irá dentro de una etiqueta <option> </option>
+                  Si tenemos muchas opciones podemos ordenarlas por categorías a través de la 
+                  etiqueta <optgroup> con el atributo label para nombrar la categoría
+ -->
+
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Formularios</title>
+</head>
+
+<body>
+    <h1>Elementos seleccionables</h1>
+    <form action="https://formsubmit.co/Roberto.shiao@epn.edu.ec" method="POST" >
+        <!-- elemento circular -->
+        <h2>Escoja el vehiculo a matricular:</h2> 
+        <label>Automovil
+            <input type="radio" name="gender" value="Automovil" checked />
+        </label>
+        <label>Moto
+            <input type="radio" name="gender" value="Moto" />
+        </label>
+        <label>vehiculo pesado
+            <input type="radio" name="gender" value="vehiculo pesado" />
+        </label>
+
+        <br />
+        <br />
+        <hr />
+        <!-- elemento checkbox en el cual el primero tiene el visto por defecto -->
+        <h2>Tipo de combustible que usa:</h2>
+        <label>
+            <input type="checkbox" name="languages" value="Extra" checked />
+            Extra
+        </label>
+        <label>
+            <input type="checkbox" name="languages" value="Super" />
+            Super
+        </label>
+        <label>
+            <input type="checkbox" name="languages" value="Diesel" />
+            Diesel
+        </label>
+
+        <br />
+        <br />
+        <hr />
+
+        <h2>Tipo de combustible que usa:</h2>
+        <!--caja con lista para seleccion-->
+        <select name="conbustible" multiple>
+            <option value="Extra">Extra</option> <!-- una unica opcion -->
+            <option value="Super">Super</option>
+            <option value="Diesel">Diesel</option>
+        </select>
+        <br />
+        <br />
+        <hr />
+        <h2>selecciona la categoria de tu vehiculo: </h2>
+        <select name="categoria_vehiculo" multiple>
+
+            <optgroup label="Vehiculo"> <!--primer grupo de opciones-->
+                <option value="Sedan">Sedan</option>
+                <option value="SUV">SUV</option>
+                <option value="Van">Van</option>
+                <option value="Pikup">Pikup</option>
+            </optgroup>
+
+            <optgroup label="Moto"> <!--segundo grupo de opciones-->
+                <option value="Enduro">Enduro</option>
+                <option value="Chopper">Chopper</option>
+                <option value="Deportiva">Deportiva</option>
+            </optgroup>
+
+            <optgroup label="Vehiculo Pesado"> <!--tercer grupo de opciones-->
+                <option value="Camion">Camion</option>
+                <option value="Tanque">Tanque</option>
+                <option value="Remolque">Remolque</option>
+            </optgroup>
+        </select>
+        <br />
+        <br />
+        <hr />
+
+        <h2>Selecciona tu vehiculo o puedes buscar por una letra:</h2>
+        <!-- barra con una lista -->
+        <input type="list" list="Vehiculo" placeholder="Selecciona tu vehiculo" />
+        <datalist id="Vehiculo">
+            <option value="Sedan">es un vehiculo</option>
+            <option value="SUV">es un vehiculo</option>
+            <option value="Van">es un vehiculo</option>
+            <option value="Enduro">es una moto</option>
+            <option value="Chopper">es una moto</option>
+            <option value="Deportiva"> es una moto</option>
+            <option value="Camion">es un vehiculo pesado</option>
+            <option value="Tanque">es un vehiculo pesado</option>
+            <option value="Remolque">es un vehiculo pesado</option>
+        </datalist>
+        <br />
+        <br />
+        <hr />
+        <input type="reset">
+        <button>Enviar formulario</button>
+    </form>
+</body>
+
+</html>

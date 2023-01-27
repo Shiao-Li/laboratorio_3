@@ -1,0 +1,37 @@
+<!-- ETIQUETAS DE HTML-->
+
+<!-- GET - POST -->
+
+<!-- https://developer.mozilla.org/es/docs/Learn/Forms/Sending_and_retrieving_form_data -->
+
+<!-- 
+  GET:  El método GET es utilizado por el navegador para pedir al servidor que se envíe 
+        de vuelta un recurso dado: "Hey servidor, quiero conseguir este recurso." 
+        En este caso, el navegador envía un cuerpo vacío. Debido a que el cuerpo está vacío, 
+        si un formulario se envía utilizando este método, los datos enviados al servidor se anexan a la URL.
+
+  POST: El POSTmétodo es un poco diferente. Es el método que el navegador utiliza para comunicarse con el 
+        servidor cuando se pide una respuesta que tenga en cuenta los datos proporcionados en el cuerpo 
+        de la petición HTTP: "Hey servidor, echa un vistazo a estos datos y envíame de vuelta un resultado 
+        apropiado." Si un formulario se envía utilizando este método, los datos se anexan al cuerpo de la
+        petición HTTP.
+ -->
+
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>GET-POST</title>
+</head>
+
+<body>
+    <form action="2-tipos-input.html" method="GET">
+        <label for="name">Tipo de formulario:</label>
+        <input type="text" id="name" name="name" />
+
+        <input type="submit" />
+    </form>
+</body>
+
+</html>

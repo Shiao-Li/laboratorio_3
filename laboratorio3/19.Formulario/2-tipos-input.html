@@ -1,0 +1,121 @@
+<!-- https://developer.mozilla.org/es/docs/Web/HTML/Element/label -->
+<!-- https://developer.mozilla.org/es/docs/Web/HTML/Element/input -->
+
+<!-- 
+    input type:
+
+        button:   Visualmente es igual, pero el formulario no se enviará
+        submit:   Se utiliza para enviar el formulario
+        
+        
+        date:     Se utiliza para introducir una fecha
+        datetime: Obsoleto
+        datetime-local -> fecha y hora, no funciona en firefox
+        time -> Se utiliza para introducir una hora
+            TIP
+                *Se recomienda usar datetime y time para seleccionar fecha y hora
+                hidden -> Campo oculto, puede contener valor pero no se mostrará
+
+        month:    Se utiliza para introducir un mes
+        week:     Se utiliza pra introducir el número de semana del año
+        
+        
+        
+        search:   Se utiliza para las barras de búsqueda
+        tel:      Se utiliza para introducir números telefónicos
+        email:    Se utiliza para introducir un email
+        password: Se utiliza para contraseñas
+        url:      Se utiliza para introducir URLs
+        
+
+        color:    Se utiliza para especificar un color
+        
+        number:   Se utiliza para valores numéricos
+        
+        range:    Se utiliza para establecer un rango
+        
+        reset:    Se utiliza para resetear el formulario
+        
+        text:     Valor por defecto
+
+        https://www.webfx.com/blog/images/assets/cdn.sixrevisions.com/demos/0345-new_html5_form_input_types/new-html5-form-input-types.html?
+ -->
+
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Formularios - Tipos Input</title>
+</head>
+
+<body>
+    <h1>Formularios</h1>
+    <form action="https://formsubmit.co/Roberto.shiao@epn.edu.ec" method="POST">
+        <label>Ingresa el nombre:</label>
+        <input />
+        <input type="submit" value="Envia el formulario" /> <!-- enviara el formulario -->
+        <input type="button" value="No envia el formulario" /> <!-- no enviara el formulario -->
+        <button>No envia el formulario</button> <!-- no tiene accion -->
+        <hr />
+        <br />
+        <br />
+        <label>Ingresa la fecha:</label> <!--Ingresar tiempo y fecha en varios formatos-->
+        <input type="date" />
+        <input type="datetime-local" />
+        <input type="date" />
+        <input type="time" />
+        <input type="month" />
+        <input type="week" />
+        <hr />
+        <br />
+        <br />
+        <div>
+            <label>search:<input type="search" /></label> <!-- buscador -->
+        </div>
+        <div>
+            <label>Ingresa el teléfono:<input type="tel" /></label> <!-- Ingreso de numeros telefonicos-->
+        </div>
+        <div>
+            <label>Ingresa el email:<input type="email" /></label> <!-- Ingresar correo electronico -->
+        </div>
+        <div>
+            <label>Ingresa el password:<input type="password" /></label> <!-- Ingresar contraseñas -->
+        </div>
+        <div>
+            <label>Ingresa la url:<input type="url" /></label> <!-- Ingresar urls-->
+        </div>
+        <hr />
+        <br />
+        <br />
+        <label>Ingresa el color:</label> <!-- Escoger el color -->
+        <input type="color" />
+        <hr />
+        <br />
+        <br />
+        <label>Ingresa la edad:</label> <!-- Ingreso numeros-->
+        <input type="number" />
+        <hr />
+        <br />
+        <br />
+        <label>Ingresa el rango:</label> <!-- Escoger un rango -->
+        <input type="range" step="1" min="0" max="100" />
+        <hr />
+        <br />
+        <br />
+        <label>Campo oculto</label>  <!-- Ocultar datos del campo -->
+        <input type="hidden" />
+        <hr />
+        <br />
+        <br />
+        <label>Ingresa el nombre:</label> <!-- Ingresar texto -->
+        <input type="text" />
+        <hr />
+        <br />
+        <br />
+        <input type="reset" value="resetear" /> <!-- Resetea el formulario -->
+        <button type="submit">Enviar formulario</button> <!-- Envia el formulario -->
+    </form>
+</body>
+
+</html>

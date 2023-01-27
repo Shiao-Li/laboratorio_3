@@ -1,0 +1,70 @@
+<!-- ETIQUETAS DE HTML-->
+
+<!-- Atributos de los formularios -->
+
+<!-- https://developer.mozilla.org/es/docs/Web/HTML/Element/form -->
+
+<!-- 
+    placeholder:            Da una pista de lo que el usuario tiene que introducir.
+    required:               Hace que un campo sea obligatorio.
+    readonly:               Hace que un campo sea de solo lectura.
+    disabled:               Desactiva el campo, no se podrá escribir en el.
+    min - max:              Establece el mínimo y máximo de un campo numérico.
+    minlenght - maxlenght:  Establece el minimo y máximo de caracteres de un campo de texto.
+    selected:               Equivale a checked en los select, sirve para establecer una opción por defecto.
+    autofocus:              Para poner el foco por defecto al cargar el formulario.
+ -->
+
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Atributos de los formularios</title>
+</head>
+
+<body>
+    <form action="https://formsubmit.co/Roberto.shiao@epn.edu.ec" method="POST">
+        <h2>Atributo placeholder y required</h2>
+        <label for="nombre">
+            Ingresa tu nombre:
+            <input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre" required
+                autocomplete="name" />
+        </label>
+        <br>
+        <hr>
+
+        <h2>Atributo readonly</h2>
+        <input type="text" value="Hola" readonly />
+        <br>
+        <hr>
+        
+        <h2>Atributo disabled</h2>
+        <!-- No se envia el dato al servidor -->
+        <input type="text" value="Hola" disabled />
+        <br>
+        <hr>
+
+        <h2>Atributo min - max</h2>
+        <input type="number" min="5" max="10" />
+        <br>
+        <hr>
+
+        <h2>Atributo minlenght - maxlenght</h2>
+        <input type="text" minlength="3" maxlength="5" name="texto" required autofocus autocomplete="on" />
+        <br>
+        <hr>
+
+        <h2>Atributo selected</h2>
+        <select name="numbers">
+            <option value="one">One</option>
+            <option value="Two" selected>Two</option>
+        </select>
+        <br>
+        <hr>
+
+        <button>Enviar formulario</button>
+    </form>
+</body>
+
+</html>

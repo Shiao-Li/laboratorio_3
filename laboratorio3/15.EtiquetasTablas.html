@@ -1,0 +1,137 @@
+<!-- ETIQUETAS DE HTML-->
+
+<!-- TABLAS -->
+
+<!-- https://developer.mozilla.org/es/docs/Web/HTML/Element/table -->
+
+<!-- https://sites.google.com/site/santitecnotic/_/rsrc/1364296569188/actividades/procesador-de-textos/horario-de-clases/Horario%20de%20clases.jpg -->
+
+<!-- 
+  Las Tablas en HTML sirven para mostrar contenido tabulado
+
+  La estructura báscica de una tabla se compone de:
+
+  table:  Etiqueta que encierra una tabla
+  tr:     
+      table row:  Etiqueta que construye una fila
+  td:
+      table data: Etiqueta que construye una celda
+ -->
+
+<!-- 
+  caption:  Estalece los titulos de las tablas, la cual deb ser colocada después de la etiqueta table
+
+  thead:    Establece las cabeceras de la tabla
+            Dentro se tiene la etiqueta tr normal, pero en el caso de las celdas, las estaleceremos 
+            con la etiqueta th en lugar de td
+
+            El contenido de la tabla debe ir dentro de una tbody para representar el cuerpo de la tabla 
+
+            De forma opcional, se puede colocarun tfoot a la tabla para establecer un pie de tabla, 
+            es útil para tablas que tienen como suma de cantidades o el total.
+  -->
+
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Tablas</title>
+</head>
+
+<body>
+    <h1>Introducción a las tablas</h1>
+    <hr>
+
+    <table> <!--Etiqueta para una tabla-->
+
+        <caption> <!--Nombre de la tabla-->
+            <strong>Profesores ESFOT TSDS</strong> <!--Mayor enfasis-->
+        </caption>
+        <tr> <!--Etiqueta de una fila-->
+            <td><b>Profesor</b></td> <!--Etiqueta de una celda-->
+            <td><b>Materia</b></td>
+            <td><b>Oficina</b></td>
+        </tr>
+        <tr>
+            <td>Ing. Ivonne Maldonado </td>
+            <td>Diseño de interfaces</td>
+            <td>Of-34B</td>
+        </tr>
+        <tr>
+            <td>Ing. Juan Pablo Zaldumbide</td>
+            <td>Programacion Orientado a Objetos</td>
+            <td>Of-01A</td>
+        </tr>
+        <tr>
+            <td>Ing. Marina Veintimilla</td>
+            <td>Bases de datos</td>
+            <td>Of-45A</td>
+        </tr>
+
+    </table>
+
+    <hr>
+    <hr>
+
+    <table>
+        <caption> <!--Nombre de la tabla -->
+            <b>
+                HORARIO DE CLASES 3er Nivel TSDS
+            </b>
+        </caption>
+        <thead> <!--Cabecera de la tabla, para crear una fila se usa tr y dentro th-->
+            <tr>
+                <th>HORA</th>
+                <th>LUNES</th>
+                <th>MARTES</th>
+                <th>MIÉRCOLES</th>
+                <th>JUEVES</th>
+                <th>VIERNES</th>
+            </tr>
+        </thead>
+        <tbody> <!--cuerpo de la tabla-->
+            <tr>
+                <td>07:00 - 10:00</td>
+                <td>POO</td>
+                <td>DI</td>
+                <td>DI</td>
+                <td>BD</td>
+                <td>POO</td>
+            </tr>
+            <tr>
+                <td>13:00 - 18:00</td>
+                <td>POO</td>
+                <td>DI</td>
+                <td>DI</td>
+                <td>BD</td>
+                <td>POO</td>
+            </tr>
+
+            <tr></tr>
+            <tr></tr>
+        </tbody>
+
+        <tfoot> <!--pie de la tabla-->
+            <tr>
+                <td></td>
+                <td></td>
+                <td>Total de asignaturas: </td>
+                <td></td>
+                <td>5</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>Creditos: </td>
+                <td></td>
+                <td>15</td>
+                <td></td>
+            </tr>
+        </tfoot>
+    </table>
+    <hr>
+</body>
+
+</html>

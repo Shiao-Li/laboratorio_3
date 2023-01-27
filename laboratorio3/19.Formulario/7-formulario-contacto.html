@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Formulario de Contacto</title>
+</head>
+
+<body>
+    <h4>Formulario de Contacto</h4>
+    <!-- https://formsubmit.co/ -->
+    <form action="https://formsubmit.co/Roberto.shiao@epn.edu.ec" method="POST"> <!-- El comentario llegara al correo -->
+
+        <input type="text" name="nombre" placeholder="Escribe tu nombre" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+            title="Nombre sólo acepta letras y espacios en blanco" required>
+
+        <br>
+
+        <input type="email" name="correo" placeholder="Escribe tu correo" required>
+        <br>
+
+        <textarea name="comentarios" cols="30" rows="10" required></textarea>
+
+        <br>
+        <input type="submit">
+    </form>
+    <br>
+    <Button><a href="index.html">Inicio</a></Button>
+
+</body>
+
+</html>

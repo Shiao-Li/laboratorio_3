@@ -1,0 +1,45 @@
+<!-- ETIQUETAS DE HTML-->
+
+<!-- CONTENIDO EMBEBIDO -->
+
+<!-- https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_picture -->
+
+<!-- 
+   Es un contenedor usado para especificar múltiples elementos <source> y un elemento <img> contenido en él 
+   para proveer versiones de una imagen para diferentes escenarios de dispositivos.
+-->
+
+
+<!-- https://caniuse.com/ -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Picture</title>
+    <style>
+        img {
+            max-width: 30%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Picture</h1>
+    <picture>
+        <!-- <source 
+      srcset="/logoweb.png, /src/logomobile.png 2x"
+      alt="logos"> -->
+        <source srcset="src/logomobile.png" media="(max-width:360px)" alt="logos">
+        <source srcset="" media="(max-width:1200px)" alt="logos">
+
+        <img src="src/logoweb.png" alt="logo">
+    </picture>
+
+</body>
+
+</html>

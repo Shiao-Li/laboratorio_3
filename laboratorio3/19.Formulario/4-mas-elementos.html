@@ -1,0 +1,86 @@
+<!-- ETIQUETAS DE HTML-->
+
+<!-- Formularios -->
+
+<!-- https://developer.mozilla.org/es/docs/Web/HTML/Element/form -->
+
+<!-- 
+    fieldset:  Se utiliza para agrupar elementos dentro de un formulario.
+
+    legend:    Representa una etiqueta para el contenido del fieldset.
+
+    file:      Este input se utiliza para cargar archivos y enviarlos desde un formulario.
+
+    meter:     Representa un valor dentro de un rango conocido.
+
+    progress:  Representa el progreso de una tarea.
+
+    textarea:  Se utiliza para introducir texto en un formulario.
+ -->
+
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Más elementos</title>
+</head>
+
+<body>
+    <form action="https://formsubmit.co/Roberto.shiao@epn.edu.ec" method="POST">
+        <fieldset>
+            <legend>
+                <h2>Formulario 2</h2>
+            </legend>
+
+            <!--Agrupa los elementos de un formulario-->
+            <fieldset>
+                <legend>Datos Personales</legend>
+                <div>
+                    <label for="name">Nombres</label>
+                    <input type="text" id="name" />
+                </div>
+                <label for="surname">Apellidos</label>
+                <input type="text" id="surname" />
+            </fieldset>
+
+            <br />
+            <br />
+            <hr />
+
+            <h2>Selecciona tu fotografía:</h2> <!--Permite subir una foto-->
+            <input type="file" />
+            <br />
+            <br />
+            <hr />
+
+            <h2>Nivel de aprendizaje</h2> <!-- barras cque represetan un rango -->
+            <meter id="language" min="0" max="100" value="90" low="10" high="100" optimum="50"></meter>
+            <label for="language">HTML</label>
+            <br>
+            <label for="language">JS</label>
+            <meter id="language" min="0" max="100" value="10" low="30" high="75" optimum="50"></meter>
+            <br />
+            <br />
+            <hr />
+
+            <h2>Nivel de tareas realizadas</h2>
+            <label for="task">Tarea 1</label> <!-- barras cque represetan un rango -->
+            <progress id="task" max="100" value="60"></progress>
+            <br />
+            <br />
+            <hr />
+
+            <h2>Dejanos tu mensaje:</h2>
+            <label for="message">Mensaje:</label> <!-- Introducir texto -->
+            <textarea name="" id="message" cols="50" rows="5"></textarea>
+            <br />
+            <br />
+            <hr />
+            <input type="reset">
+            <button>Enviar formulario</button>
+        </fieldset>
+    </form>
+</body>
+
+</html>

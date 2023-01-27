@@ -1,0 +1,112 @@
+<!-- ETIQUETAS DE HTML-->
+
+<!-- TABLAS -->
+
+<!-- https://developer.mozilla.org/es/docs/Web/HTML/Element/table -->
+
+<!-- https://sites.google.com/site/santitecnotic/_/rsrc/1364296569188/actividades/procesador-de-textos/horario-de-clases/Horario%20de%20clases.jpg -->
+
+<!-- 
+  Para hacer que las celdas ocupen más de una fila o más de una columna tenemos 2 atributos:
+  
+    rowspan:  sirve para que una celda ocupe más de una fila, el valor por defecto es 1 
+
+    colspan:  sirve para que una celda ocupe más de una columna, el valor por defecto es 1
+  -->
+
+<!-- 
+    Cuando necesitemos seleccionar una columna, tenemos la etiqueta colgroup, que nos permite
+    seleccionar una columna en concreto. Dentro pondremos tantas etiquetas col como columas tengamos,
+    cada etiqueta col equivaldrá a una columna siguiendo el mismo orden que tiene en la tabla
+
+    Si necesitamos que una etiqueta col agrupe más de una columna, tenemos el atributo span, que 
+    funciona exactamente igual que rowspan y colspan.
+   -->
+
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Tablas</title>
+    <style>
+        col:nth-child(1) {
+            background-color: rgb(175, 175, 194);
+        }
+
+        col:nth-child(2) {
+            background-color: rgb(201, 123, 123);
+        }
+
+        col:nth-child(3) {
+            background-color: rgba(207, 207, 24, 0.877);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Introducción a las tablas</h1>
+    <table>
+        <caption> <!--Nombre de la tabla-->
+            <b>
+                HORARIO DE CLASES 3er Nivel TSDS
+            </b>
+        </caption>
+        <colgroup>
+            <col span="4" />
+            <col />
+            <col />
+        </colgroup>
+        <thead>
+            <tr>
+                <th>HORA</th>
+                <th>LUNES</th>
+                <th>MARTES</th>
+                <th>MIÉRCOLES</th>
+                <th>JUEVES</th>
+                <th>VIERNES</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>07:00 - 10:00</td>
+                <td >POO</td>
+                <td rowspan="2 ">DI</td>
+                <td rowspan="2">DI</td>
+                <td>BD</td>
+                <td>POO</td>
+            </tr>
+            <tr>
+                <td>10:00 - 13:00</td>
+                <td>BD</td>
+                <td>DI</td>
+                <td>BD</td>
+            </tr>
+            <tr>
+                <td>13:00 - 14:00</td>
+                <td colspan="5">A L M U E R Z O</td>
+            </tr>
+            <tr>
+                <td>13:00 - 18:00</td>
+                <td>POO</td>
+                <td>DI</td>
+                <td>DI</td>
+                <td>BD</td>
+                <td>POO</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="5">Total de asignaturas:</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td colspan="5">Creditos:</td>
+                <td>15</td>
+            </tr>
+                
+        </tfoot>
+    </table>
+</body>
+
+</html>

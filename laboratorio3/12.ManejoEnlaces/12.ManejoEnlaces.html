@@ -1,0 +1,104 @@
+<!-- ETIQUETAS DE HTML-->
+
+<!-- ENLACES / LINKS -->
+<!-- https://developer.mozilla.org/es/docs/Web/HTML/Element/a -->
+<!-- https://developer.mozilla.org/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#primer_acercamiento_a_urls_y_rutas
+ -->
+<!-- https://pressroom.hostalia.com/white-papers/rutas-absolutas-y-relativas/ -->
+
+
+<!-- 
+  Enlaces: Conocidos también como links popularmente. Su objetivo es conectar una página web con otra.  
+            Conectar un recurso tanto interno como externo, o con otro sitio web.           
+            Tienen el atributo obligatorio href, donde le especificamos la ruta del recurso o sitio que deseamos obtener
+            También tiene el atributo target, que configura cómo queremos visualuzar el recurso o sitio que solicitemos.
+  
+  Rutas absolutas: Tienen un protocolo, http o https y son unicas en la red, se suelen utilizar para rutas externas.
+
+  Rutas relativas:  Pueden ser relativas al punto donde nos encontremos o relativas a la raíz del proyecto.                  
+                    No usan protocolo http o https   
+                    Si el recurso se encuentra al mismo nivel (En la misma carpeta) podemos unicamente el nombre del archivo  
+                    Si necesitamos salir de la carpeta actual usaremos ../ y se pone uno por cada nivel (carpeta) de la que queramos salir 
+
+Atributos a los enlaces
+
+  href: establecer la ruta de navegación (absoluta o relativa)
+
+  target:   se define donde se quiere abrir el recurso solicitado. Por norma general, siempre que se utilice 
+            rutas absolutas se recomienda colocar como valor "_blank"
+  
+  download: Atributo booleano, sirve para descargar el recurso solicitado. 
+            IMPORTANTE: el recurso debe estar en tu mismo servidor.
+ -->
+
+<!--
+  https://faq.whatsapp.com/iphone/how-to-link-to-whatsapp-from-a-different-app/?lang=es_pe
+-->
+
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Enlaces</title>
+
+    <style>
+        body {
+            font-size: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Manejando enlaces</h1>
+    <!-- Absolutas -->
+    <h3>Enlace a redes sociales</h3>
+    <a href="https://www.facebook.com/">Facebook</a>
+    <br>
+    <!-- Absolutas con atributos -->
+    <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+    <br>
+    <a href="https://www.tiktok.com/" target="_blank">TikTok</a>
+    <br>
+    <hr>
+
+    <h3>Descarga Wallpapers </h3>
+    <!-- Absolutas con atributos -->
+    <a href="assets/pexels-eberhard-grossgasteiger-1366835.jpg" download="pexels-eberhard-grossgasteiger-1366835.jpg">
+        <img src="assets/pexels-eberhard-grossgasteiger-1366835.jpg" alt="Wallpaper1" width="200" height="100">Presiona
+        para descargar</a>
+    <br>
+    <a href="assets/pexels-uzunov-rostislav-5011647.jpg" download="pexels-uzunov-rostislav-5011647.jpg">
+        <img src="assets/pexels-uzunov-rostislav-5011647.jpg" alt="Wallpaper2" width="200" height="100">Presiona para
+        descargar</a>
+    <br>
+    <h4>Pexels</h4>
+    <!-- Absolutas con atributos -->
+    <a href="https://www.pexels.com/es-es/" target="_blank"><span style='font-size:50px;'>&#128247</span>Pagina de Wallpapers</a>
+    <hr>
+    <h3>Comunicate con Roberto Shiao</h3>
+
+    <!-- Absolutas con atributos -->
+    <a href="mailto: roberto.shiao@epn.edu.ec">Correo institucional</a>
+    <br>
+    <!-- Absolutas con atributos -->
+    <a href="tel:0960449696">Telefono personal</a>
+    <br>
+    <!-- Absolutas con atributos -->
+    <a href="https://api.whatsapp.com/send?phone=0960449696&text= Hola Roberto" target="_blank">Enviame un mensaje a whatsapp</a>
+    <br>
+
+
+
+    <!-- Relativas -->
+    <a href="./demo/contacto.html">Ir a contacto - Opción 1</a>
+    <br>
+    <a href="demo/contacto.html">Ir a contacto - Opción 2</a>
+    <hr>
+    <a href="About.html">Ir a About</a>
+    <hr>
+    <a href="./demo/servicios/servicios.html">Ir a servicios</a>
+</body>
+
+</html>

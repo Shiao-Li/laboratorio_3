@@ -1,0 +1,71 @@
+<!-- ETIQUETAS DE HTML-->
+
+<!-- ATRIBUTOS EN LAS ETIQUETAS -->
+<!-- https://developer.mozilla.org/es/docs/Web/HTML/Attributes -->
+
+<!-- 
+  Son valores adicionales que configuran los elementos y/o ajustan su comportamiento 
+  Hay dos tipos de atributos:
+    * Comunes:
+          Su sintaxis es => aributo="valor"
+    * Booleanos:
+          Su sintaxis es => atributo
+ -->
+<!-- 
+  Algunos atributos globales que estan disponibles para la mayoría de etiquetas en HTML
+
+  class:  Este atributo se usa para dar estilos a través de CSS 
+
+  id:     Es un identificador único que se utiliza para seleccionar el elemento 
+          desde JS y para hacer navegación a través de enlaces 
+  title:  Esun atributo que ayuda a la accesibilidad mostrando una descripción del elemento 
+          al que pertenece.
+
+  data:   Es un atributo que nos permite guardar algún valor en la etiqueta del HTML
+ -->
+ <!DOCTYPE html>
+
+ <!-- Configurar el documento HTML sea español -->
+ <html lang="es-ES">
+   <head>
+     <!-- Sirve para poder utilizar caracteres especiales y codificación-->
+     <meta charset="UTF-8" />
+ 
+     <title>Atributos</title>
+     
+     <style>
+       .parrafo-1 {
+         color: blue;
+       }
+       .parrafo-2{
+         color: red;      
+       }
+     </style>
+     
+   </head>
+   <body>
+     
+     <h1>Atributos en las etiquetas </h1>
+     <input type="checkbox" name="vehiculo" checked>Vehículo</input> <!-- Le esta diciendo que venga cheked por defecto -->
+     <input type="checkbox" name="moto" >Moto</input> <!-- Le esta diciendo que no este ckeckeado por defecto -->
+     <h4>Ingrese su fecha de nacimiento</h4>
+     <input type="date" name="fecha" id="fecha-1"></input>
+     <h1>Atributos globales </h1>
+     <!--El tooltip es la ventanita que aparece al posisicionar el cursor sobre la etiqueta -->
+     <p title="Tiene un estilo con color azul" class="parrafo-1">Clases</p>
+     <!--title: tooltip, id: nombre del indentificador, class: estilo que obtiene-->
+     <p title="Tiene un estilo con color rojo" id="parrafo-2" class="parrafo-2" >Identificador a través de un ID</p>
+     <p title="Esto es una descripción más detallada">Título con tooltip</p>
+
+     <p id="parrafo-3" data-id="1234567890" data-user="saul" data-date-of-birth>Datos pasados en la etiqueta</p>
+ 
+     <script>
+       const dato = document.getElementById("parrafo-2").textContent
+       console.log(dato)
+       const dato2 = document.getElementById("parrafo-3")
+       console.log(dato2.dataset.id)
+       console.log(dato2.dataset.user)
+       console.log(dato2.dataset.dateOfBirth="17-05-2000")
+     </script>
+   </body>
+ </html>
